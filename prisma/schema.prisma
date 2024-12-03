@@ -20,6 +20,20 @@ model Player {
   status  Status
 }
 
+model Instructor {
+  id  Int   @id   @default(autoincrement())
+  name  String?
+  class  String @unique
+  status  Status
+}
+
+model Student {
+  id  Int   @id   @default(autoincrement())
+  name  String?
+  grade  String @unique
+  status  Status
+}
+
 enum Status {
   bench
   field
